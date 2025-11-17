@@ -7,6 +7,8 @@ python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser
 python manage.py runserver
+
+
 Endpoints
 POST /api/users/register/ - register user with role employer|applicant
 POST /api/token/ - obtain JWT (username+password)
@@ -18,5 +20,7 @@ DELETE /api/jobs/{id}/ - delete (owner)
 POST /api/apply/ - apply to job (applicant) body: {"job_id": id, "resume_link": "url"}
 GET /api/myapplications/ - view your applications (applicant)
 GET /api/jobs/{id}/applicants/ - employer view applicants for their job
+
+
 Notes
 Use JWT Authorization: Bearer <access_token>
